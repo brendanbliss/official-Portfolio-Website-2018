@@ -75,7 +75,7 @@ header nav ul li a:hover, .active {
 }
 
 
-#heroText {
+#heroText, #projectsText {
 	text-align: center;
 	position: absolute;
 	font-size: 1.35em;
@@ -85,7 +85,7 @@ header nav ul li a:hover, .active {
 	color: white;
 }
 
-#heroText a {
+#heroText a, #projectsText a {
 	display: inline-block;
 	padding: 5px;
 	color: white;
@@ -97,7 +97,7 @@ header nav ul li a:hover, .active {
 	margin: 0 10px;
 }
 
-#heroText a:hover {
+#heroText a:hover, #projectsText a:hover {
 	background-color: white;
 	color: black;
 }
@@ -151,8 +151,25 @@ header nav ul li a:hover, .active {
 	position: relative;
 }
 
+/*      */
+
+#blogHero {
+	clear: both;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/tempHero.jpg);
+	height: 300px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
 
 /* sections */
+
+.wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+}
 
 div.darkSection {
 	clear: both;
@@ -170,6 +187,18 @@ div.darkSection h1 {
 	margin: 0 0 40px 0;
 }
 
+div.darkSection p {
+	text-align: center;
+}
+
+div.darkSection a {
+	color: gray;
+}
+
+div.darkSection a:hover {
+	color: white;
+}
+
 div.lightSection {
 	clear: both;
 	background-color: white;
@@ -181,12 +210,188 @@ div.lightSection {
 
 div.lightSection p, div.darkSection p {
 	margin: 0;
-	margin-left: auto;
-	margin-right: auto;
-	width: 85%;
+
+}
+
+div.leftContainer {
+	float: left;
+	width: 50%;
+}
+
+div.leftContainer img {
+	height: 300px;
+	border-radius: 4px;
+}
+
+div.rightContainer {
+	float: right;
+	width: 50%;
 }
 
 
+/* BLOG */
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn { 
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.blogRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+/* FLIP CARDS */
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+/* TABLE */
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button.sortButtons  {
+	background-color: rgb(20,20,20);
+	color: white;
+	border: none;
+	border-radius: 5px;
+	padding: 5px;
+	margin: 0 5px;
+}
+
+button.sortButtons:hover {
+	background-color: gray;
+	color: black;
+}
+
+div.buttonDiv h3 {
+	margin: 0;
+	float: left;
+	margin-right: 10px;
+}
+
+div.sortButtonsDiv {
+	margin: 20px 0;
+}
+
+/* FORM */
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: white;
+    color: black;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    background-color: gray;
+	color: white;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    border-radius: 5px;
+    background-color: rgb(20,20,20);
+    padding: 20px;
+}
+
+form label {
+	color: white;
+}
 
 
 /* footer */
