@@ -7,28 +7,30 @@
 		<link rel="stylesheet" href="style.css" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="scripts/scripts.js" type="text/javascript">
-		
+
 		</script>
+		<link rel="icon" href="icons/biconBlack1.png" type="image/ico">
+
 	</head>
-	
+
 	<body>
+
+		<header class="none" id="fixHeader">
+			<h1><a href="index.html">Brendan Bliss</a></h1>
+
+			<nav class="navBar" id="topNavBar">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a class="active" href="resume.html">Resume</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li class="menuIcon"><a href="javascript:void(0);" class="menuIcon" onclick="changeNavBar()"><img id="menuIconHamburger" src="icons/hamburgerWhite.png" alt="menuIcon"></a></li>
+				</ul>
+			</nav>
+
+		</header>
+
 		<div id="resumeHero">
-			<header>
-				<h1><a href="index.html">Brendan Bliss</a></h1>
-
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="bio.html">Bio</a></li>
-						<li><a class="active" href="resume.html">Resume</a></li>
-						<li><a href="projects.html">Projects</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="blog.html">Blog</a></li>
-					</ul>
-				</nav>
-
-			</header>
-			
 			<div id="projectsText">
 				<h1>Resume</h1>
 				<p>Education. Work Experience. Skills.</p>
@@ -37,24 +39,28 @@
 				<a href="#downloadSection">Downloads</a>
   			</div>
 		</div>
-		
+
+
+
+
 		<main>
-			
+
 			<div class="darkSection" id="resumeSection">
 				<div class="wrapper">
 					<h1>Resume</h1>
 				</div>
 			</div>
-			
+
 			<div class="lightSection">
 				<div class="wrapper">
-					
+					<div class="resumeSections">
+
 					<h2>Education</h2>
 					<h4>Dixie State University</h4>
 					<p>
 						<i>St. George, Utah</i> <br>
-						Bachelor's of Science - Biology <br>
-						with biomedical emphasis and chemistry minor <br>
+						Bachelor's of Science - Biology with biomedical emphasis <br>
+						Computer Science and Chemistry minor <br>
 						In progress, graduating spring of 2019 <br>
 						3.93 cumulative GPA
 					</p>
@@ -65,7 +71,7 @@
 						Graduated 2013 <br>
 						3.97 cumulative GPA
 					</p>
-					
+
 					<h2>Work Experience</h2>
 					<dl>
 						<dt><b>Orderly</b> - Dixie Regional Medical Center - Intermountain Health Care </dt>
@@ -80,50 +86,60 @@
 							<dd>Receive inbound calls. Answer questions and assist students in applying for financial aid and scholarships. Ensure the protection of student information in accordance with FERPA regulations.</dd>
 							<dd><i>Ogden, Utah – January 2014 to April 2015</i><br></dd>
 
-						<dt><b>Automotive Detailer</b> - Beutler Auto Sales</dt>
-							<dd>Clean and detail vehicles. Assist owner and salesman with day to day functions. Manage inventory and aided customers.</dd>
-							<dd><i>Clearfield, Utah – December 2012 to July 2013</i><br></dd>
-
-						<dt><b>Customer Service Representative</b> - America First Credit </dt>
-							<dd>Receive inbound customer calls. Responsible for answering questions and resolving any issues or problems. Ensure the safety and protection of customer accounts and information.</dd>
-							<dd><i>Riverdale, Utah – August 2010 to June 2011</i></dd>
 					</dl>
-					
+
 					<h2>Skills</h2>
-					<ul>
-						<li>Computer proficiency. Microsoft office course completed (word, excel, power point). 60 WPM. </li>
-						<li>Spanish language fluency. Served full-time LDS mission in Paraguay (July 2011 to October 2012).</li>
-						<li>CPR, First Aid, and AED certified. Aseptic Technique.</li>
-						<li>Medical scribe and assistant (1 year+) at Doctor’s Volunteer clinic (St. George).</li>
-					</ul>
-					
+						<ul>
+							<li>Proficiency in Python, CSS, HTML and Microsoft office. </li>
+							<li>Familiarity in JavaScrip, C++, Data Structures and Algorithms.</li>
+							<li>Fluency in Spanish reading, writing and speaking.</li>
+							<li>Biochemistry research at Dixie State University on G6PDH enzyme and diabetes.</li>
+							<li>CPR, First Aid, and AED certified.</li>
+						</ul>
+
 					<h2>Community Service</h2>
+						<ul>
+							<li>Medical scribe and assistant (1 year) at Doctor’s Volunteer clinic (St. George).</li>
+							<li>Volunteer high school wrestling coach (2 years).</li>
+							<li>Service trip to Guatemala (2018).</li>
+							<li>Several service projects through Dixie State clubs.</li>
+							<li>Served church service mission for the Church of Jesus Christ of Latter-Day Saints.</li>
+						</ul>
 					</div>
 					</div>
-			
+				</div>
+
 			<div class="darkSection" id="cirriculumSection">
 				<div class="wrapper">
 					<h1>Cirriculum</h1>
-					<p>Use the sortable table below to search through Brendan's university courses. Not official - <a href="" >official transcipt request.</a></p>
+					<p>Use the sortable table below to search through Brendan's courses. Not official - send an email to brendanmbliss@gmail.com to request an official transcript.</p>
 				</div>
 			</div>
-			
+
 			<div class="lightSection">
-				<div class="wrapper">
-					
+				<div class="wrapper" id="noMarginWrapper">
+
+					<p>
+						This table can be downloaded as an excel spread sheet.
+					</p>
+					<br>
+					<p><a href="cirriculumTable.xlsx" class="downloadButton">Download</a></p>
+					<br>
+
+					<div id="responsiveTable">
 					<div class="buttonDiv">
 					<h3>Sort by:</h3>
-						
+
 						<div class="sortButtonsDiv">
-							<button class="sortButtons" onclick="sortTableSubject()">Subject</button>
-							<button class="sortButtons" onclick="sortTableCourse()">Course</button>
-							<button class="sortButtons" onclick="sortTableTitle()">Title</button>
-							<button class="sortButtons" onclick="sortTableGrade()">Grade</button>
-							<button class="sortButtons" onclick="sortTableDate()">Date</button>
-							<button class="sortButtons" onclick="sortTableUniversity()">University</button>
+							<button class="sortButtons" onclick="sortTable(0)">Subject</button>
+							<button class="sortButtons" onclick="sortTable(1)">Course</button>
+							<button class="sortButtons" onclick="sortTable(2)">Title</button>
+							<button class="sortButtons" onclick="sortTable(3)">Grade</button>
+							<button class="sortButtons" onclick="sortTable(5)">Date</button>
+							<button class="sortButtons" onclick="sortTable(6)">University</button>
 						</div>
 					</div>
-					
+
 					<table id="cirriculumTable">
 					  <tr>
 						<th>Subject</th>
@@ -134,7 +150,7 @@
 						<th>Date Completed</th>
 						<th>University</th>
 					  </tr>
-						
+
 					  <tr>
 						<td>Nutrition</td>
 						<td>1020</td>
@@ -144,7 +160,7 @@
 						<td>2010</td>
 						<td>Weber State University</td>
 					  </tr>
-						
+
 					  <tr>
 						<td>English</td>
 						<td>1010</td>
@@ -154,525 +170,357 @@
 						<td>2010</td>
 						<td>Weber State University</td>
 					  </tr>
-						
+
 					  <tr>
 						<td>Math</td>
 						<td>1210</td>
 						<td>Calculus I</td>
 						<td>Currently Enrolled</td>
 						<td>4.0</td>
-						<td>2018 Fall</td>
+						<td>2018</td>
 						<td>Dixie State University</td>
 					  </tr>
-						
+
 						<tr>
 							<td>Psychology</td>
 							<td>3400</td>
 							<td>Psychology of Abnormal Behavior</td>
 							<td>Currently Enrolled</td>
 							<td>3.0</td>
-							<td>2018 Fall</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Computer Science</td>
 							<td>3005</td>
 							<td>Programming in C++</td>
 							<td>Currently Enrolled</td>
 							<td>3.0</td>
-							<td>2018 Fall</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Comptuer Science</td>
 							<td>2420</td>
 							<td>Into to Algorithms and Data Structures</td>
 							<td>Currently Enrolled</td>
 							<td>3.0</td>
-							<td>2018 Fall</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>3550</td>
 							<td>Eukaryotic Cell Biology with Lab</td>
 							<td>Currently Enrolled</td>
 							<td>4.0</td>
-							<td>2018 Fall</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Computer Science</td>
 							<td>1400</td>
 							<td>Fundamentals of Programming</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2018 Summer</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Computer Science</td>
 							<td>1410</td>
 							<td>Object Oriented Programming</td>
 							<td>A-</td>
 							<td>3.0</td>
-							<td>2018 Summer</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Web Development</td>
 							<td>1400</td>
 							<td>Web Design I</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2018 Summer</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>3010</td>
 							<td>Evolution</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2018 Spring</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>3030</td>
 							<td>Genetics</td>
 							<td>A</td>
 							<td>4.0</td>
-							<td>2018 Spring</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>3520</td>
 							<td>Biochemistry II</td>
 							<td>A-</td>
 							<td>3.0</td>
-							<td>2018 Spring</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Psychology</td>
 							<td>3410</td>
 							<td>Social Psychology</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2018 Spring</td>
+							<td>2018</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Psychology</td>
 							<td>4300</td>
 							<td>Into to Conseling and Psychotherapy</td>
 							<td>A-</td>
 							<td>4.0</td>
-							<td>2017 Fall</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Psychology</td>
 							<td>3710</td>
 							<td>Behavioral Neuroscience</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2017 Fall</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>1620</td>
 							<td>Principles of Biology II with Lab</td>
 							<td>A-</td>
 							<td>4.0</td>
-							<td>2017 Fall</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>3510</td>
 							<td>Biochemistry I with Lab</td>
 							<td>A-</td>
 							<td>4.0</td>
-							<td>2017 Summer</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>2320</td>
 							<td>Organic Chemistry II with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2017 Spring</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>2420</td>
 							<td>Human Physiology with Lab</td>
 							<td>A</td>
 							<td>4.0</td>
-							<td>2017 Spring</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>2320</td>
 							<td>Organic Chemistry II with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2017 Spring</td>
+							<td>2017</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>2310</td>
 							<td>Organic Chemistry I with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2016 Fall</td>
+							<td>2016</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>2320</td>
 							<td>Human Anatomy with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2016 Fall</td>
+							<td>2016</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Spanish</td>
 							<td>3090</td>
 							<td>Spanish: Medical</td>
 							<td>A</td>
 							<td>3.0</td>
-							<td>2016 Fall</td>
+							<td>2016</td>
 							<td>Dixie State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>2060</td>
 							<td>Principles of Microbiology with Lab</td>
 							<td>A</td>
 							<td>4.0</td>
-							<td>2015 Spring</td>
+							<td>2015</td>
 							<td>Weber State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>1220</td>
 							<td>Principles of Chemistry II with Lab</td>
 							<td>A-</td>
 							<td>5.0</td>
-							<td>2015 Spring</td>
+							<td>2015</td>
 							<td>Weber State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Physics</td>
 							<td>2020</td>
 							<td>College Physics II with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2015 Spring</td>
+							<td>2015</td>
 							<td>Weber State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Chemistry</td>
 							<td>1210</td>
 							<td>Principles of Chemistry I with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2014 Summer</td>
+							<td>2014</td>
 							<td>Weber State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Biology</td>
 							<td>1210</td>
 							<td>Principles of Biology I with Lab</td>
 							<td>A</td>
 							<td>4.0</td>
-							<td>2014 Spring</td>
+							<td>2014</td>
 							<td>Weber State University</td>
 						</tr>
-						
+
 						<tr>
 							<td>Physics</td>
 							<td>2010</td>
 							<td>College Physics I with Lab</td>
 							<td>A</td>
 							<td>5.0</td>
-							<td>2014 Spring</td>
+							<td>2014</td>
 							<td>Weber State University</td>
 						</tr>
 
-					
-						
+
+
 					</table>
-						
+
 				</div>
 			</div>
-			
+			</div>
+
 			<script>
-				
-				function sortTableSubject() {
+
+				function sortTable(value) {
 				  var table, rows, switching, i, x, y, shouldSwitch;
 				  table = document.getElementById("cirriculumTable");
 				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
 				  while (switching) {
-					//start by saying: no switching is done:
 					switching = false;
 					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
 					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
 					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[0];
-					  y = rows[i + 1].getElementsByTagName("TD")[0];
-					  //check if the two rows should switch place:
+					  x = rows[i].getElementsByTagName("TD")[value];
+					  y = rows[i + 1].getElementsByTagName("TD")[value];
 					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
 						shouldSwitch = true;
 						break;
 					  }
 					}
 					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
 					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
 					  switching = true;
 					}
 				  }
 				}
-				
-				function sortTableTitle() {
-				  var table, rows, switching, i, x, y, shouldSwitch;
-				  table = document.getElementById("cirriculumTable");
-				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
-				  while (switching) {
-					//start by saying: no switching is done:
-					switching = false;
-					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
-					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
-					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[2];
-					  y = rows[i + 1].getElementsByTagName("TD")[2];
-					  //check if the two rows should switch place:
-					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch = true;
-						break;
-					  }
+
+
+				function changeNavBar() {
+					var x = document.getElementById("topNavBar");
+					var y = document.getElementById("fixHeader");
+
+					if (x.className === "navBar") {
+						x.className += " responsiveNavBar";
+						y.className += " responsiveNavBar";
+					} else {
+						x.className = "navBar";
+						y.className = "";
 					}
-					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
-					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-					  switching = true;
-					}
-				  }
 				}
-				
-				function sortTableGrade() {
-				  var table, rows, switching, i, x, y, shouldSwitch;
-				  table = document.getElementById("cirriculumTable");
-				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
-				  while (switching) {
-					//start by saying: no switching is done:
-					switching = false;
-					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
-					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
-					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[3];
-					  y = rows[i + 1].getElementsByTagName("TD")[3];
-					  //check if the two rows should switch place:
-					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch = true;
-						break;
-					  }
-					}
-					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
-					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-					  switching = true;
-					}
-				  }
-				}
-				
-				function sortTableDate() {
-				  var table, rows, switching, i, x, y, shouldSwitch;
-				  table = document.getElementById("cirriculumTable");
-				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
-				  while (switching) {
-					//start by saying: no switching is done:
-					switching = false;
-					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
-					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
-					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[4];
-					  y = rows[i + 1].getElementsByTagName("TD")[4];
-					  //check if the two rows should switch place:
-					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch = true;
-						break;
-					  }
-					}
-					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
-					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-					  switching = true;
-					}
-				  }
-				}
-				
-				function sortTableUniversity() {
-				  var table, rows, switching, i, x, y, shouldSwitch;
-				  table = document.getElementById("cirriculumTable");
-				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
-				  while (switching) {
-					//start by saying: no switching is done:
-					switching = false;
-					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
-					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
-					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[5];
-					  y = rows[i + 1].getElementsByTagName("TD")[5];
-					  //check if the two rows should switch place:
-					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch = true;
-						break;
-					  }
-					}
-					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
-					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-					  switching = true;
-					}
-				  }
-				}
-				
-				function sortTableCourse() {
-				  var table, rows, switching, i, x, y, shouldSwitch;
-				  table = document.getElementById("cirriculumTable");
-				  switching = true;
-				  /*Make a loop that will continue until
-				  no switching has been done:*/
-				  while (switching) {
-					//start by saying: no switching is done:
-					switching = false;
-					rows = table.rows;
-					/*Loop through all table rows (except the
-					first, which contains table headers):*/
-					for (i = 1; i < (rows.length - 1); i++) {
-					  //start by saying there should be no switching:
-					  shouldSwitch = false;
-					  /*Get the two elements you want to compare,
-					  one from current row and one from the next:*/
-					  x = rows[i].getElementsByTagName("TD")[1];
-					  y = rows[i + 1].getElementsByTagName("TD")[1];
-					  //check if the two rows should switch place:
-					  if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-						//if so, mark as a switch and break the loop:
-						shouldSwitch = true;
-						break;
-					  }
-					}
-					if (shouldSwitch) {
-					  /*If a switch has been marked, make the switch
-					  and mark that a switch has been done:*/
-					  rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-					  switching = true;
-					}
-				  }
-				}
+
+
 			</script>
-			
+
 			<div class="darkSection" id="downloadSection">
 				<div class="wrapper">
 					<h1>Downloads</h1>
 					<p>Click on the links below.</p>
 				</div>
 			</div>
-			
+
 			<div class="lightSection">
 				<div class="wrapper">
-					<p>
-					</p>
+					<p><a href="Resume - Updated.doc">Resume - Word Document </a></p>
+					<p><a href="Resume - Updated.pdf">Resume - PDF </a></p>
+					<p>If you would like to obtain an official transcript, please email brendan to brendanmbliss@gmail.com.</a>
+
 				</div>
 			</div>
-			
-		
-		
+
+
+
 		</main>
-		
+
 		<footer>
 			<div class="row">
 				<div id="siteMap" class="column">
@@ -684,9 +532,9 @@
 							<li><a href="resume.html">Resume</a></li>
 							<li><a href="projects.html">Projects</a></li>
 							<li><a href="contact.html">Contact</a></li>
-							<li><a href="blog.html">Blog</a></li>
+<!--							<li><a href="blog.html">Blog</a></li>-->
 						</ul>
-					</nav>			
+					</nav>
 				</div>
 
 				<div id="socialMedia" class="column">
@@ -704,11 +552,11 @@
 					<p>Brendan Bliss is currently finishing up a bachelor's degree in Biology with minors in computer science and chemistry. He will be graduating in 2019 and is actively looking for career opporunities in technology and science. <a href="resume.html">See his resume</a> and <a href="projects.html"> personal projects</a>.</p>
 				</div>
 			</div>
-			
+
 			<div class="copyRight">
 				<p>copyright &copy; 2018 Brendan Bliss</p>
 			</div>
-		
+
 		</footer>
 	</body>
 </html>
