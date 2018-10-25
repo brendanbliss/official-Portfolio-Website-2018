@@ -531,8 +531,8 @@ footer div.copyRight p {
 @media only screen and (max-width:37.5em) {
 
 	#homehero {
-		background-image: none;
-		height:auto;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/tempProfile.jpg);
+		height: 200px;
 	}
 
 	.row {
